@@ -266,7 +266,14 @@ Event.prototype = {
 var GameState = {"PLAYING":1, "WIN":2, "LOST":3, "STOPPED": 4};
 window.onload = function() {
 	Game.start();
-};
+	document.getElementById("bombCount").innerHTML = Game.mines;
+
+}
+
+document.oncontextmenu = function(){
+ // your code
+	document.getElementById("flagCount").innerHTML = (document.getElementsByClassName("flag").length - 1).toString();
+}
 
 var Game = {
 	board: null,
@@ -278,6 +285,8 @@ var Game = {
 		if (!GameState.STOPPED)	return;
 		document.getElementById("loser").style.display = "none";
 		document.getElementById("winner").style.display = "none";
+		document.getElementById("info").style.display = "block";
+		document.getElementById("flagCount").innerHTML = "0";
 
 		this.prepareBoard();
 		this.state = GameState.PLAYING;
@@ -287,6 +296,9 @@ var Game = {
 		if (this.mines <= 0) return;
 		document.getElementById("loser").style.display = "none";
 		document.getElementById("winner").style.display = "none";
+		document.getElementById("info").style.display = "block";
+		document.getElementById("flagCount").innerHTML = "0";
+
 		this.state = GameState.PLAYING;
 		this.board.refresh(this.mines);
 	},
