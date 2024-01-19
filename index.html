@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta http-equiv="pragma" content="no-cache" />
+	<title>Minesweeper</title>
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+	<!--
+	<script src="js/Event.js"></script>
+	<script src="js/BoardModel.js"></script>
+	<script src="js/BoardView.js"></script>
+	<script src="js/Board.js"></script>
+	<script src="js/Game.js"></script>
+	-->
+	<script src="js/merge_clear.js"></script>
+</head>
+<body>
+
+<div>
+	<h1 class="center">MineSweeper</h1>
+
+	<div id="board"></div>
+
+
+	<div class="center" id="info">
+	<div class="center">Clicca su un quadrato per rivelarlo.</div>
+	<div class="center">Tieni premuto per mettere una bandiera.</div>
+	</div>
+
+	<div class="center" id="winner">
+		Congratulazioni! Hai vinto!<br>
+		Le coordinate sono: <br>
+		<span id="winner-coord">HEHEHE VOLEVI! Gioca pulito .... oppure no, provaci, scommetto che non riesci a violare questo codice</span>
+
+	</div>
+	<div class="center" id="loser">
+		BOOM! Hai perso!
+		<button class="center" onclick="Game.restart();">Restart</button>
+	</div>
+
+</div>
+
+
+</body>
+</html>
