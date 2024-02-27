@@ -307,6 +307,7 @@ var Game = {
 		let level = "intermediate"
 		let size = 0;
 
+
 		switch (level) {
 
 			case 'debug':
